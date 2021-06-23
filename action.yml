@@ -1,12 +1,22 @@
 name: 'Flawfinder'
 description: 'Execute Flawfinder'
 inputs:
-  command:
+  arguments:
     description: 'Command to be sent to Flawfinder'
     required: false
-    default: '--help'
+    default: ''
+  sourcepath:
+    description: 'Command to be sent to Flawfinder'
+    required: false
+    default: './'
+  sarif:
+    description: 'Sarif output file name'
+    required: false
+    default: 'flawfinder_results.sarif'
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.command }}
+    - ${{ inputs.arguments }}
+    - ${{ inputs.sourcepath }}
+    - ${{ inputs.sarif }}
