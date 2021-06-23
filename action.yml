@@ -14,5 +14,4 @@ runs:
   image: 'Dockerfile'
   args:
     - ${{ inputs.arguments }}
-    - ${{ inputs.sourcepath }}
-    - ${{ inputs.sarif }}
+    - ${{ inputs.output }}
