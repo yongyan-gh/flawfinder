@@ -5,14 +5,10 @@ inputs:
     description: 'Command arguments to be sent to Flawfinder'
     required: false
     default: ''
-  sourcepath:
-    description: 'Source path to be analyzed by Flawfinder'
+  output:
+    description: 'Output file name'
     required: false
-    default: './'
-  sarif:
-    description: 'Sarif output file name'
-    required: false
-    default: 'flawfinder_results.sarif'
+    default: ''
 runs:
   using: 'docker'
   image: 'Dockerfile'

@@ -17,13 +17,13 @@ jobs:
       - name: Flawfinder action step
         uses: ./ # Uses an action in the root directory
         with:
-          sourcepath: ./
-          sarif: flawfinder_results.sarif
+          arguments: '--sarif ./'
+          output: 'flawfinder_results.sarif'
 
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v2.2.4
         with:
-          path: flawfinder_results.sarif        
+          path: flawfinder_results.sarif   
 
       - name: Upload analysis results to GitHub Security tab
         uses: github/codeql-action/upload-sarif@v1

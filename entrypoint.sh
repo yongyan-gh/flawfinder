@@ -1,8 +1,7 @@
 #!/bin/sh -l
 # $1 arguments
-# $2 source path
-# $3 sarif file name
+# $2 output filename
 
-flawfinder --sarif $1 $2 > $3
+flawfinder $1 > $2
 
 echo "Executed with success."
