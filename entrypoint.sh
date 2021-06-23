@@ -1,6 +1,6 @@
 #!/bin/sh -l
 
-flawfinder $1
+flawfinder $1 > flawfinder_results.sarif
 
 pwd
 
