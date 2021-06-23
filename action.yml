@@ -2,11 +2,11 @@ name: 'Flawfinder'
 description: 'Execute Flawfinder'
 inputs:
   arguments:
-    description: 'Command to be sent to Flawfinder'
+    description: 'Command arguments to be sent to Flawfinder'
     required: false
     default: ''
   sourcepath:
-    description: 'Command to be sent to Flawfinder'
+    description: 'Source path to be analyzed by Flawfinder'
     required: false
     default: './'
   sarif:

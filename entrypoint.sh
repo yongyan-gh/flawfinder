@@ -5,6 +5,4 @@
 
 flawfinder --sarif $1 $2 > $3
 
-cat $3
-
 echo "Executed with success."
