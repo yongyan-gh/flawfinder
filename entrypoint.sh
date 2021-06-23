@@ -2,8 +2,6 @@
 
 flawfinder $1 > flawfinder_results.sarif
 
-pwd
-
-ls
+cat flawfinder_results.sarif
 
 echo "Executed with success."
