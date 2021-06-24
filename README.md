@@ -55,6 +55,20 @@ flawfinder (including its various options) and related information
 (such as how it supports CWE).  For example, the `--html` option generates
 output in HTML format. The `--help` option gives a brief list of options.
 
+# Action usage
+
+See [action.yml](action.yml) for more information.
+
+Basic:
+```yaml
+steps:
+- uses: actions/checkout@v2
+- uses: david-a-wheeler/flawfinder@v1.0
+  with:
+    arguments: '--sarif ./'
+    output: 'flawfinder_results.sarif'
+```
+
 # Character Encoding Errors
 
 Flawfinder must be able to correctly interpret your source code's

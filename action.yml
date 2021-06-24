@@ -3,11 +3,11 @@ description: 'Execute Flawfinder'
 inputs:
   arguments:
     description: 'Command arguments to be sent to Flawfinder'
-    required: false
+    required: true
     default: ''
   output:
     description: 'Output file name'
-    required: false
+    required: true
     default: ''
 runs:
   using: 'docker'
